@@ -1,0 +1,17 @@
+curl -X PATCH --user "nprdiyjc:6abe547a-2656-4e88-8d60-0fa5fb96f99a" --digest  -H "Content-Type: application/json" "https://cloud.mongodb.com/api/atlas/v1.0/groups/60016b68683d41792455653e/userSecurity?pretty=true" --data '
+{
+  "ldap" : {
+   "authenticationEnabled" : true,
+   "authorizationEnabled" : true,
+   "authzQueryTemplate" : "{USER}?memberOf?base",
+   "bindPassword" : "Ldapb1nduser",
+   "bindUsername" : "CN=ldap-bind-user,CN=Users,DC=mdbrecruit,DC=net",
+       "caCertificate" : "-----BEGIN CERTIFICATE-----\nMIIDizCCAnOgAwIBAgIQdrwdxAA4zalI3UDH2ISTijANBgkqhkiG9w0BAQsFADBY\nMRMwEQYKCZImiZPyLGQBGRYDbmV0MRowGAYKCZImiZPyLGQBGRYKbWRicmVjcnVp\ndDElMCMGA1UEAxMcbWRicmVjcnVpdC1UUkFERUNSQUZUTERBUC1DQTAeFw0yMDAz\nMjUxMzM1NDFaFw0yNTAzMjUxMzQ1MzVaMFgxEzARBgoJkiaJk/IsZAEZFgNuZXQx\nGjAYBgoJkiaJk/IsZAEZFgptZGJyZWNydWl0MSUwIwYDVQQDExxtZGJyZWNydWl0\nLVRSQURFQ1JBRlRMREFQLUNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC\nAQEAmc4x6s8u1ef6VmcESybY25gndAtExtiTjz0TiGWAg69lO1/w8AZOCjNzTzE4\nZPUzjDWI0jViPRYzobP+xO+wSNq9COT+HuobckOMXACPHya/PDZZ4CM7xoxfQ3L5\nPeohxIQNAT6+GpbKNtjk4fpDjzlpBw+9e0B8pgoaVlNiXqE09NJPW5tsjp2yYa/S\n5vvFRVo2n4QPRxUJrJaloq6Xh/oiHrjol79LnYgai3ni0N+yD5TE/qiHjyRKXFwY\nrW35bNCNIX2QwgvATkb8EqUgUApKxn1MUDfjw08JyKa0sEVRJkUFYsptDq2zRCD+\n90BZBzo2VFsC2910KagS3FViGwIDAQABo1EwTzALBgNVHQ8EBAMCAYYwDwYDVR0T\nAQH/BAUwAwEB/zAdBgNVHQ4EFgQUGDGw2vYz7n3I6D4lhdA2Fd/CY7cwEAYJKwYB\nBAGCNxUBBAMCAQAwDQYJKoZIhvcNAQELBQADggEBAGvO7+Z+SBxRZsiXUdZgLQAm\n4N0V1DYB7sV6U7Cw7fAonvVM3/FxeHE4pTXrf0h6cIQqAPxUdDfr4ZdAG7WF3Tih\nrv2yDZ4ri0lwCa3CNgt0iQRaPdPzzw9RVnw6nfPthKEYYBXNGPTYxTvMMXoFMT/W\nkGngasD4VyfHdkz8Bwqy1wCpMrMbc2mb3BCM43Pq/qh/XXJYoEwZ0HSDzpwsmw62\no+hZK1wXkIniy3Ej5WrRn/YUiFsg3nHVuvtwLyDQf0bdCIKyo3c3bTdsEqwM0l8F\nWVp7Q01uIhThNzqHTE9Y1d8Hl2Rp+NPv16J7agvbSbD/ExIIREPNZRkxoKI2OKA=\n-----END CERTIFICATE-----",
+   "hostname" : "tradecraftldap.mdbrecruit.net",
+   "port" : 636,
+   "userToDNMapping" : [ {
+     "ldapQuery" : "CN=Users,DC=mdbrecruit,DC=net??sub?(sAMAccountName={0})",
+     "match" : "(.+)"
+   } ]
+ }
+}'
